@@ -1,0 +1,5 @@
+config SHIELD_HELLOWORLD8_LEFT
+    def_bool $(shields_list_contains,helloworld8_left)
+
+config SHIELD_HELLOWORLD8_RIGHT
+    def_bool $(shields_list_contains,helloworld8_right)
