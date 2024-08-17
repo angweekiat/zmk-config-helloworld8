@@ -8,7 +8,7 @@
         zmk,matrix-transform = &matrix_wiring_transform;
     };
 
-    matrix_wiring_kscan: kscan {
+    matrix_wiring_kscan: matrix_wiring_kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "matrix_wiring_kscan";
         wakeup-source;
@@ -25,7 +25,7 @@
             ;
     };
 
-    matrix_wiring_transform: keymap_transform_0 {
+    matrix_wiring_transform: matrix_wiring_transform {
         compatible = "zmk,matrix-transform";
         columns = <4>;
         rows = <2>;
