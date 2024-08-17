@@ -4,11 +4,11 @@
 / {
 
     chosen {
-        zmk,kscan = &kscan0;
-        zmk,matrix-transform = &default_transform;
+        zmk,kscan = &matrix_wiring_kscan;
+        zmk,matrix-transform = &matrix_wiring_transform;
     };
 
-    kscan0: kscan {
+    matrix_wiring_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "matrix_wiring_kscan";
         wakeup-source;
@@ -25,7 +25,7 @@
             ;
     };
 
-    default_transform: keymap_transform_0 {
+    matrix_wiring_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <4>;
         rows = <2>;
