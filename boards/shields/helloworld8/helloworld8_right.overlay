@@ -1,5 +1,8 @@
 #include "helloworld8.dtsi"
 
+&direct_wiring_transform {
+    col-offset = <4>;
+};
 
 &matrix_wiring_transform {
     col-offset = <2>;
