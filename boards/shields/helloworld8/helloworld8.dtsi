@@ -9,7 +9,7 @@
     };
 
     default_transform: keymap_transform_0 {
-        compatible = "zmk,kscan-gpio-matrix";
+        compatible = "zmk,matrix-transform";
         label = "matrix_wiring_kscan";
         wakeup-source;
         diode-direction = "col2row";
@@ -25,8 +25,8 @@
             ;
     };
 
-    kscan0: kscan_0 {
-        compatible = "zmk,matrix-transform";
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
         columns = <4>;
         rows = <2>;
         map = <
