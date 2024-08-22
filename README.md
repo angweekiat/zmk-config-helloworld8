@@ -32,3 +32,8 @@ Super experimental attempt at wiring everything up. First time soldering, so I d
 | Soldering Mat | $9, Artfriend | |
 | Wires | Free | Extracted copper wires from a spare Ethernet cable|
 | Keycaps | Free-ish | Reused from another unused set of key caps. Not strictly needed for this POC |
+
+### Notes
+
+Matrix:
+Got caught by bad config copy paste, gpiogpio1 instead of pro_micro in <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
