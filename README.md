@@ -61,7 +61,9 @@ instead of
             - The plate is meant to be screwed into the case.
         - 1 for housing the switches, microcontroller, and battery, with an opening for type C cable, now that I'm more confident:
         ![Onshape Large size case](resources/onshape_largecase.png)
-        <video src="resources/onshape_largecase_rotate.mp4" controls></video>
+
+            - https://github.com/user-attachments/assets/bcf295e2-c2a0-40e9-bb1a-28639a99ccf7
+
             - The type C opening failed miserably, the opening was wide enough for the header, but too deep for the cable to enter
             - The microcontroller slot worked __too well__, the microcontroller snap fitted into the -slot, and I had to spent a long time prying it out
             - The case was __still too small__, the battery barely fit in with the microcontroller, and I ended up having to take the microcontroller outside
@@ -81,7 +83,7 @@ On top of the materials above,
 
 ## Vid Example
 
-<video src="resources/example.mp4" controls></video>
+https://github.com/user-attachments/assets/a2e4e436-d98b-4557-b4f3-c82a395ebc5b
 
 ## Thoughts and Future work
 
