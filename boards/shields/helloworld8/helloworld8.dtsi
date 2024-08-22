@@ -4,35 +4,34 @@
 / {
 
     chosen {
-        zmk,kscan = &direct_wiring_kscan;
-        zmk,matrix-transform = &direct_wiring_transform;
+        zmk,kscan = &matrix_wiring_kscan;
+        zmk,matrix-transform = &matrix_wiring_transform;
     };
 
-    direct_wiring_kscan: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        label = "direct_wiring_kscan";
+    matrix_wiring_kscan: matrix_wiring_kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "matrix_wiring_kscan";
         wakeup-source;
+        diode-direction = "col2row";
 
-        input-gpios
-        = <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        ;
+        col-gpios
+            = <&pro_micro 6 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
     };
 
-    // all direct wiring I referenced seemed to prefer 1 row X columns for
-    // all keys, I tried a 2x2 transform, but the offset was incorrect somewhere,
-    // decided to not pursue it to and move on to matrix wiring, since that's
-    // my goal.
-    direct_wiring_transform: keymap_transform_0 {
+    matrix_wiring_transform: matrix_wiring_transform {
         compatible = "zmk,matrix-transform";
-        columns = <8>;
-        rows = <1>;
+        columns = <4>;
+        rows = <2>;
         map = <
-            RC(0,0) RC(0,1)             RC(0,4) RC(0,5)
-            RC(0,2) RC(0,3)             RC(0,6) RC(0,7)
+            RC(0,0) RC(0,1)             RC(0,2) RC(0,3)
+            RC(1,0) RC(1,1)             RC(1,2) RC(1,3)
         >;
     };
-
 };
